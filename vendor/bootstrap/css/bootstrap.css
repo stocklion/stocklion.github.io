@@ -9319,7 +9319,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 /*# sourceMappingURL=bootstrap.css.map */
 
-/* for input search field onfocus effeect*/
+/* for input search field onfocus effect*/
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -9336,7 +9336,7 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-  border-color: rgba(66, 252, 100, 0.8);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 5) inset, 0 0 8px rgba(66, 252, 100, 0.8);
+  border-color: rgba(66, 252, 100, 0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset, 0 0 8px rgba(66, 252, 100, 0);
   outline: 0 none;
 }
