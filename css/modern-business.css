@@ -157,3 +157,7 @@ body {
     color: #FFF;
 
 }
+
+.col-center{
+    margin:0 auto;
+}
