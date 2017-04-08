@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>주식::사자 - 초보자인 당신과 함께하는 든든한 지원군</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <!--NANUM GOTHIC-->
+    <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+    <!--NOTO SANS FOR BACKUP-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <!--Nanum pen font-->
+    <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumpenscript.css">
+
+    <!-- Temporary navbar container fix -->
+    <style>
+        .navbar-toggler {
+            z-index: 1;
+        }
+
+        @media (max-width: 576px) {
+            nav > .container {
+                width: 100%;
+            }
+        }
+
+        /* Temporary fix for img-fluid sizing within the carousel */
+
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            display: block;
+        }
+
+        /*
+            for the blinking cursor
+         */
+        .typed-cursor{
+            opacity: 1;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+
+    </style>
+
+
+    <script src="js/typed.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            Typed.new('.element', {
+                strings: ["쉽다.", "재밌다.", "부담없다."],
+                stringsElement: null,
+                // typing speed
+                typeSpeed: 200,
+                // time before typing starts
+                startDelay: 0,
+                // backspacing speed
+                backSpeed: 200,
+                // shuffle the strings
+                shuffle: false,
+                // time before backspacing
+                backDelay: 500,
+                // loop
+                loop: true,
+                // null = infinite
+                loopCount: null,
+                // show cursor
+                showCursor: true,
+                // character for cursor
+                cursorChar: "|",
+                // attribute to type (null == text)
+                attr: null,
+                // either html or text
+                contentType: 'html',
+                // call when done callback function
+                callback: function() {},
+                // starting callback function before each string
+                preStringTyped: function() {},
+                //callback for every typed string
+                onStringTyped: function() {},
+                // callback for reset
+                resetCallback: function() {}
+            });
+        });
+    </script>
+
+
+</head>
+
+<body class="homepage-hero-module">
+
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light transparent" style="padding: 20px 0px 20px 0px">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <a class="navbar-brand" href="index.html" style = "color: rgb(242, 131, 107); font-weight: bold;">주식사자</a>
+        <div class="collapse navbar-collapse" id="navbarExample">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3">
+                    <a class="nav-link"  style = "color: rgb(242, 131, 107);" href="about.html">주식 비교</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" style = "color: rgb(242, 131, 107);" href="services.html">주식 선택</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" style = "color: rgb(242, 131, 107);" href="contact.html">우리는</a>
+                </li>
+                <li class="nav-item ml-4">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">로그인</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container video-container d-flex justify-content-center d-flex align-items-center" style="height: 100vh; width: 100vw; margin: 0 0 0 0; padding: 0 0 0 0;"
+id = "white">
+
+    <section class = "centered">
+
+    <header class = " text-center"  style = "color: rgb(242, 131, 107);">
+    <h1 class = "text-center mb-5 pb-1" style = "color: rgb(242, 131, 107); font-size: 500%; font-weight: bold">
+        주식은 <span class = "element"></span>
+    </h1>
+    </header>
+
+    <form class="form">
+        <input class="form-control form-control-lg col-lg-8 mx-auto " name="search" type="text" placeholder="주식..." style = "height: 70px">
+    </form>
+        <div class  ="text-center">
+        <button type="button" class="btn btn-outline-success mt-5 pt-1 text-center pt-3 pr-3 pl-3 pb-3" style = "" id = "bottomLink">차근차근 시작해 볼 각</button>
+        </div>
+   </section>
+
+
+    <!--
+    <video autoplay loop class="fillWidth">
+        <source src="assets/New-York-Sky/MP4/New-York-Sky.mp4" type="video/mp4"/>
+        Your browser does not support the video tag. I suggest you upgrade your browser.
+        <source src="assets/New-York-Sky/WEBM/New-York-Sky.webm" type="video/webm"/>
+        Your browser does not support the video tag. I suggest you upgrade your browser.
+    </video>
+
+    <div class="videoFilter"></div>
+    -->
+
+
+    <!-- /.container -->
+</div>
+
+<!-- Footer -->
+<footer class="py-5" id="red">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; 주식깡패</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/tether/tether.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
