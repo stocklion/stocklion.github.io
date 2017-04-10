@@ -162,7 +162,13 @@ body {
     margin:0 auto;
 }
 
-select {
-    display: block;
-    margin: 0 auto;
+.select2-choice {
+    box-sizing: border-box;
+    display: block!important;
+    white-space: nowrap!important;
+    line-height: 65px!important;
+}
+
+select{
+    font-size: 30px!important;
 }
