@@ -35,6 +35,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 
+    <!--Chart.js
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>-->
+    <script src="js/Chart.bundle.min.js"></script>
+    <script src="js/utils.js"></script>
+
     <!-- Fonts -->
     <!--NANUM GOTHIC-->
     <link rel="stylesheet" type="text.css" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
@@ -43,72 +49,10 @@
     <!--Nanum pen font-->
     <link rel="stylesheet" type="text.css" href="//fonts.googleapis.com/earlyaccess/nanumpenscript.css">
 
+
     <!-- Temporary navbar container fix -->
     <style>
-        .navbar-toggler {
-            z-index: 1;
-        }
 
-        @media (max-width: 576px) {
-            nav > .container {
-                width: 100%;
-            }
-        }
-
-        /* Temporary fix for img-fluid sizing within the carousel */
-
-        .carousel-item.active,
-        .carousel-item-next,
-        .carousel-item-prev {
-            display: block;
-        }
-
-        /*
-            for the blinking cursor
-         */
-
-        .typed-cursor {
-            opacity: 1;
-            -webkit-animation: blink 0.7s infinite;
-            -moz-animation: blink 0.7s infinite;
-            animation: blink 0.7s infinite;
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @-webkit-keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @-moz-keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
     </style>
 
     <!--JS-->
@@ -172,10 +116,11 @@
 
 </head>
 
-<body class="homepage-hero-module" style="background-color: #FFF">
+<body class="homepage-hero-module" style="background-color: #FFF; ">
 
 <!-- Navigation -->
-<nav class="navbar fixed-top navbar-toggleable-md navbar-light transparent" style="padding: 20px 0px 20px 0px">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light transparent" style="padding: 20px 0px 20px 0px;
+background-color: rgba(0, 0, 0, 0);">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -202,9 +147,12 @@
     </div>
 </nav>
 
-<!-- Page Content -->
 <div class="container video-container d-flex justify-content-center d-flex align-items-center"
      style="height: 100vh; width: 100vw; margin: 0 0 0 0; padding: 0 0 0 0;" id="white">
+
+
+    <!-- Page Content -->
+
 
     <section class="centered">
         <header class=" text-center" style="color: rgb(242, 131, 107);">
@@ -251,6 +199,150 @@
 
     </section>
 
+    <canvas id="canvas" style="height: 100vh;
+    width: 100vw;"></canvas>
+    <script>
+        var DEFAULT_DATASET_SIZE = 7;
+
+        var addedCount = 0;
+        var color = Chart.helpers.color;
+        var bubbleChartData = {
+            animation: {
+                duration: 1000000
+            },
+            datasets: [{
+                backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                data: [{
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }]
+            }, {
+                backgroundColor: color(window.chartColors.orange).alpha(0.5).rgbString(),
+                data: [{
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }, {
+                    x: randomScalingFactor(),
+                    y: randomScalingFactor(),
+                    r: Math.abs(randomScalingFactor()) / 5,
+                }]
+            }]
+        };
+
+        window.onload = function () {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myChart = new Chart(ctx, {
+                type: 'bubble',
+                data: bubbleChartData,
+                defaultFontFamily: "'Nanum Gothic', 'Noto Sans', sans-serif",
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    responsive: true,
+                    tooltips: {
+                        mode: 'point'
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: false
+                        }],
+                        yAxes: [{
+                            display: false
+                        }]
+                    }
+
+                }
+            });
+        };
+
+        document.getElementById('canvas').addEventListener('mouseenter', function () {
+            bubbleChartData.datasets.forEach(function (dataset) {
+                dataset.data = dataset.data.map(function () {
+                    return {
+                        x: randomScalingFactor(),
+                        y: randomScalingFactor(),
+                        r: Math.abs(randomScalingFactor()) / 5,
+                    };
+                });
+            });
+            window.myChart.update();
+        });
+
+        var colorNames = Object.keys(window.chartColors);
+        document.getElementById('canvas').addEventListener('mouseenter', function () {
+            if (addedCount >= 10) {
+                // don't add
+            }
+            else {
+                ++addedCount;
+                var colorName = colorNames[bubbleChartData.datasets.length % colorNames.length];
+
+                var dsColor = window.chartColors[colorName];
+                var newDataset = {
+                    backgroundColor: color(dsColor).alpha(0.5).rgbString(),
+                    data: []
+                };
+
+                for (var index = 0; index < DEFAULT_DATASET_SIZE; ++index) {
+                    newDataset.data.push({
+                        x: randomScalingFactor(),
+                        y: randomScalingFactor(),
+                        r: Math.abs(randomScalingFactor()) / 5,
+                    });
+                }
+
+                bubbleChartData.datasets.push(newDataset);
+                window.myChart.update();
+            }
+        });
+    </script>
 
     <!--
 <video autoplay loop class="fillWidth">
@@ -265,6 +357,8 @@
 
 
     <!-- /.container -->
+
+
 </div>
 
 <!-- Footer -->
