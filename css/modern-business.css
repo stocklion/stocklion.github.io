@@ -4,6 +4,83 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
 
+.navbar-toggler {
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    nav > .container {
+        width: 100%;
+    }
+}
+
+/* Temporary fix for img-fluid sizing within the carousel */
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: block;
+}
+
+/*
+    for the blinking cursor
+ */
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#canvas{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
 *{
     font-family: 'Nanum Gothic', 'Noto Sans', sans-serif;
 
@@ -36,28 +113,12 @@ html, body{
     margin: 0 0 0 0;
 }
 
-body {
-    padding-top: 54px;
-}
-
 @media (min-width: 992px) {
+    /*
     body {
         padding-top: 56px;
     }
-}
-
-.carousel-item {
-    height: 65vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.portfolio-item {
-    margin-bottom: 30px;
+    */
 }
 
 #green{
@@ -130,7 +191,7 @@ body {
     z-index: -1;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
-    background-color: rgba(99, 166, 159, 0.5);
+    background-color: rgba(255, 255, 255, 1);
 }
 .video-container video {
     position: absolute;
@@ -172,3 +233,4 @@ body {
 select{
     font-size: 30px!important;
 }
+
