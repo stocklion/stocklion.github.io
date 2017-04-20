@@ -1,0 +1,22 @@
+.warning{
+    line-height: 20px;
+    width: 80%;
+    font-size: 12px;
+}
+
+h2.selectStock{
+    color: #F2594B;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.selectStockAlert{
+    line-height: 30px;
+}
+
+.leftContainer, .rightContainer{
+    width: 15%;
+    padding: 0;
+    margin: 0;
+}
+

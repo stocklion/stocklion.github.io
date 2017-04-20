@@ -29,6 +29,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/stock-selection.css" rel="stylesheet">
 
     <!-- Select2.js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -45,44 +46,24 @@
 
     <!-- Temporary navbar container fix -->
     <style>
-        .navbar-toggler {
-            z-index: 1;
+        .fullH{
+            height:100vh;
         }
-
-        @media (max-width: 576px) {
-            nav > .container {
-                width: 100%;
-            }
-        }
-
-        /* Temporary fix for img-fluid sizing within the carousel */
-
-        .carousel-item.active,
-        .carousel-item-next,
-        .carousel-item-prev {
-            display: block;
+        html, body{
+            height: 100%;
+            margin: 0;
         }
     </style>
 
     <!--JS-->
-
-    <!--Select2-->
-    <script>
-        $(document).ready(function () {
-            $(".js-example-basic-multiple").select2({
-                theme: "bootstrap",
-                placeholder: "주식 검색"
-            });
-        }); //document ready
-    </script>
-
 
 </head>
 
 <body class="homepage-hero-module" style="background-color: #FFF">
 
 <!-- Navigation -->
-<nav class="navbar fixed-top navbar-toggleable-md navbar-light transparent" style="padding: 20px 0px 20px 0px">
+
+<nav class="navbar navbar-fixed-top navbar-toggleable-md navbar-light glass" style="padding: 20px 20px 20px 20px;" >
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -93,13 +74,19 @@
         <div class="collapse navbar-collapse" id="navbarExample">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item mr-3">
-                    <a class="nav-link" style="color: rgb(242, 131, 107);" href="about.html">주식 비교</a>
+                    <a class="nav-link fade_bottom" style="color: rgb(242, 131, 107); font-weight: bold;" href="about.html">주식 비교</a>
                 </li>
                 <li class="nav-item mr-3">
-                    <a class="nav-link" style="color: rgb(242, 131, 107);" href="stockSelection.html">주식 선택</a>
+                    <a class="nav-link fade_bottom" style="color: rgb(242, 131, 107); font-weight: bold;" href="stockSelection.html">주식 선택</a>
                 </li>
                 <li class="nav-item mr-3">
-                    <a class="nav-link" style="color: rgb(242, 131, 107);" href="contact.html">우리는</a>
+                    <a class="nav-link fade_bottom" style="color: rgb(242, 131, 107); font-weight: bold;" href="stockSelection.html">내 포트폴리오</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link fade_bottom" style="color: rgb(242, 131, 107);" href="contact.html">우리는</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link fade_bottom" style="color: rgb(242, 131, 107);" href="contact.html">Methodology</a>
                 </li>
                 <li class="nav-item ml-4">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">로그인</button>
@@ -108,6 +95,41 @@
         </div>
     </div>
 </nav>
+
+<main class = "container-fluid d-flex justify-content-between fullH">
+    <!--left container-->
+    <section class = "container-fluid leftContainer">
+
+    </section>
+    <!--middle container-->
+    <section class = "container bg-faded">
+        <h2 class = "selectStock mt-4">주식 선택</h2>
+        <div class="alert alert-info mt-4 pt-4 mr-3 ml-3 selectStockAlert" role="alert">
+            <h4 class="alert-heading">주식 선택은 3 단계로 분류돼요.</h4>
+            <ol>
+                <li>업종 선택: 아래에는 10개 섹터, 25개의 인더스트리 그룹 소분류를 리스트로 보여주며 희망하는 업종을 고를 수 있도록 함. All 을 고를 수 있도록 함</li>
+                <li>분류항목 선택: 특정 섹터/ 인더스트리를 고른 경우 그에 맞는 멀티플별로 회사이름 list. All을 고른경우 EV/EBITDA로 회사 list</li>
+                <li>회사 선택: ROIC, past revenue growth, debt level 등을 선택할 수 있게한 후 list. *To discuss: 여기서 합산 점수를 보여주냐 아니면 옆에 보여주냐
+                </li>
+            </ol>
+        </div>
+    </section>
+    <!--right container-->
+    <section class = "container-fluid rightContainer">
+        <div class="alert alert-info alert-dismissible col-center warning mb-3" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>팁</strong> </br> 모르는 전문용어가 있으면 클릭해주세요. 클릭한 후에 그 용어를 계속 화면에 띄워놓고 싶으시다면 화면 우측이나 좌축으로 드래그하시면 됩니다.
+            왜 이런 기능이 있냐구요? 우리는 모두 초보니까요!
+        </div>
+        <div class="alert alert-warning alert-dismissible col-center warning mb-3" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>알아둘 점</strong> </br> 주식사자(주)에서 제공하는 금융정보는 각 컨텐츠 제공업체제공업체 상세설명부터 받는 정보로 투자 참고 사항이며, 오류가 발생할 수 있고 지연될 수
+            있습니다. 주식사자(주)는 제공된 정보에 의한 투자결과에 대한 법적인 책임을 지지 않습니다. 게시된 정보를 무단으로 배포할 수 없습니다.
+        </div>
+    </section>
+
+</main>
+
 
 
 <!-- Footer -->
