@@ -69,6 +69,18 @@
     }
 }
 
+nav.glass{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+@media only screen and (max-width: 480px) {
+    nav.glass{
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+}
+
+
 #canvas{
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -232,5 +244,19 @@ html, body{
 
 select{
     font-size: 30px!important;
+}
+
+a.fade_bottom{
+    border-bottom: 1px solid rgba(196, 110, 105, 0);
+
+    -webkit-transition: border 350ms ease;
+    -moz-transition: border 350ms ease;
+    -ms-transition: border 350ms ease;
+    -o-transition: border 350ms ease;
+    transition: border 350ms ease;
+}
+
+a.fade_bottom:hover{
+    border-bottom: 1px solid rgba(196, 110, 105, 1);
 }
 
