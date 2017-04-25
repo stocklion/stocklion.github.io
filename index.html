@@ -63,7 +63,6 @@
     <!--Typed.js-->
     <script src="js/typed.js"></script>
     <script>
-
         document.addEventListener('DOMContentLoaded', function () {
 
             Typed.new('.element', {
@@ -107,7 +106,6 @@
         });
     </script>
 
-
     <!--Select2-->
     <script>
         $(document).ready(function () {
@@ -116,6 +114,11 @@
                 placeholder: "주식 검색"
             });
         }); //document ready
+        $(document).ready (function checkSubmit(e) {
+            if(e && e.keyCode == 13) {
+                document.forms[0].submit();
+            }
+        });
     </script>
 
 
@@ -170,10 +173,10 @@
             </h1>
         </header>
 
-        <form action="form" class="d-flex justify-content-center d-flex align-items-center select2-choice"
-              style="display: block; width: 70%; margin: 0 auto; font-size: 30px;">
+        <form action="" class="d-flex justify-content-center d-flex align-items-center select2-choice"
+              style="display: block; width: 70%; margin: 0 auto; font-size: 30px;" method = "get">
             <select class="js-example-basic-multiple form-control-lg col-md-4 " multiple="multiple" name="search"
-                    type="text" style="width: 100%; height: 100px;">
+                    type="text" style="width: 100%; height: 100px;" >
 
                 <!--Use Ruby to iterate thru all the stock lists and give information here (in an ascending order)-->
                 <option value="AK">063080</option>

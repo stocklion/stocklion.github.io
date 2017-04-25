@@ -15,8 +15,20 @@ div.selectStockAlert{
 }
 
 .leftContainer, .rightContainer{
-    width: 15%;
+    width: 30%;
     padding: 0;
     margin: 0;
 }
 
+.rightDialog{
+    margin: 0 auto 15px auto;
+    width: 90%;
+}
+
+#second{
+
+}
+
+#first{
+
+}

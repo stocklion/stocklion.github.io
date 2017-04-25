@@ -31,6 +31,9 @@
     <link href="css/modern-business.css" rel="stylesheet">
     <link href="css/stock-selection.css" rel="stylesheet">
 
+    <!--CSS styles for dragula.js-->
+    <link href = "css/dragula.min.css" type = "text/css" rel = "stylesheet"/>
+    <link href = "css/dragula-in-use.css" type = "text/css" rel = "stylesheet"/>
 
     <!-- tipped.js -->
     <script type="text/javascript" src="js/tipped.js"></script>
@@ -44,7 +47,7 @@
     <!--Nanum pen font-->
     <link rel="stylesheet" type="text.css" href="//fonts.googleapis.com/earlyaccess/nanumpenscript.css">
 
-    <!-- Temporary navbar container fix -->
+    <!-- Temporary-->
     <style>
         .fullH{
             height:100vh;
@@ -55,12 +58,14 @@
         }
     </style>
 
-    <!--JS-->
-
 </head>
 
 <body class="homepage-hero-module" style="background-color: #FFF">
-
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 <!-- Navigation -->
 
 <nav class="navbar navbar-fixed-top navbar-toggleable-md navbar-light glass" style="padding: 20px 20px 20px 20px;" >
@@ -96,11 +101,8 @@
     </div>
 </nav>
 
-<main class = "container-fluid d-flex justify-content-between fullH">
-    <!--left container-->
-    <section class = "container-fluid leftContainer">
+<main class = "container-fluid d-flex justify-content-around fullH">
 
-    </section>
     <!--middle container-->
     <section class = "container bg-faded">
         <h2 class = "selectStock mt-4">주식 선택</h2>
@@ -109,28 +111,29 @@
             <ol>
                 <li>업종 선택: 아래에는 10개 섹터, 25개의 인더스트리 그룹 소분류를 리스트로 보여주며 희망하는 업종을 고를 수 있도록 함. All 을 고를 수 있도록 함</li>
                 <li>분류항목 선택: 특정 섹터/ 인더스트리를 고른 경우 그에 맞는 멀티플별로 회사이름 list. All을 고른경우 EV/EBITDA로 회사 list</li>
-                <li>회사 선택: ROIC, past revenue growth, debt level 등을 선택할 수 있게한 후 list. *To discuss: 여기서 합산 점수를 보여주냐 아니면 옆에 보여주냐
+                <li>회사 선택: <a href="#" data-toggle="tooltip" title="" data-original-title="Default tooltip">ROIC</a>, past revenue growth, debt level 등을 선택할 수 있게한 후 list. *To discuss: 여기서 합산 점수를 보여주냐 아니면 옆에 보여주냐
                 </li>
             </ol>
         </div>
     </section>
     <!--right container-->
-    <section class = "container-fluid rightContainer">
-        <div class="alert alert-info alert-dismissible col-center warning mb-3" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <section class = "container-fluid rightContainer" id = "left-rm-spill">
+        <div class="alert alert-info col-center warning rightDialog" id = "first" role="alert">
             <strong>팁</strong> </br> 모르는 전문용어가 있으면 클릭해주세요. 클릭한 후에 그 용어를 계속 화면에 띄워놓고 싶으시다면 화면 우측이나 좌축으로 드래그하시면 됩니다.
             왜 이런 기능이 있냐구요? 우리는 모두 초보니까요! 만약에 용어가 친숙해졌을 때는, 그 땐 바로 닫아버리고 계속 주식을 보면 되는거죠!
         </div>
-        <div class="alert alert-warning alert-dismissible col-center warning mb-3" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <div class="alert alert-warning col-center warning rightDialog" id = "second" role="alert">
             <strong>알아둘 점</strong> </br> 주식사자(주)에서 제공하는 금융정보는 각 컨텐츠 제공업체제공업체 상세설명부터 받는 정보로 투자 참고 사항이며, 오류가 발생할 수 있고 지연될 수
             있습니다. 주식사자(주)는 제공된 정보에 의한 투자결과에 대한 법적인 책임을 지지 않습니다. 게시된 정보를 무단으로 배포할 수 없습니다.
+        </div>
+
+        <div class="alert alert-success col-center warning rightDialog" id = "third" role="alert">
+            <strong>P/E 비율</strong> </br> 일반적으로, 수익성장률의 절반에 해당하는 P/E비율은 매우 긍정적인 신호이고, 수익성장률의 두배에 해당하는 P/E비율은 매우 부정적인 신호이다.
         </div>
     </section>
 
 </main>
-
-
 
 <!-- Footer -->
 <footer class="py-5" id="red">
@@ -139,8 +142,10 @@
     </div>
     <!-- /.container -->
 </footer>
-
-
+<script type = "text/javascript" src = "js/dragula.js"></script>
+<script type = "text/javascript" src = "js/dragulaInUse.js"></script>
 </body>
+
+
 
 </html>
