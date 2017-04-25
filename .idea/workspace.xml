@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f110f4a-ddeb-45a1-b77c-700f64a5cd6e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/stock-selection.css" afterPath="$PROJECT_DIR$/css/stock-selection.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockSelection.html" afterPath="$PROJECT_DIR$/stockSelection.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7708609">
+    <splitter split-orientation="horizontal" split-proportion="0.8390728">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="modern-business.css" pinned="false" current-in-tab="false">
@@ -35,8 +33,8 @@
           <file leaf-file-name="stockSelection.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/stockSelection.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="574">
-                  <caret line="118" column="26" lean-forward="true" selection-start-line="118" selection-start-column="26" selection-end-line="118" selection-end-column="26" />
+                <state relative-caret-position="645">
+                  <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
                   <folding>
                     <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -54,8 +52,8 @@
           <file leaf-file-name="dragulaInUse.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/dragulaInUse.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
-                  <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                <state relative-caret-position="543">
+                  <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -93,8 +91,8 @@
           <file leaf-file-name="stock-selection.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/stock-selection.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="16">
-                  <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+                <state relative-caret-position="544">
+                  <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -112,6 +110,7 @@
       <find>jquery</find>
       <find>j</find>
       <find>select-</find>
+      <find>handle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,11 +120,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/css/modern-business.css" />
-        <option value="$PROJECT_DIR$/css/stock-selection.css" />
         <option value="$PROJECT_DIR$/css/example.css" />
         <option value="$PROJECT_DIR$/js/dragulaInUse.js" />
-        <option value="$PROJECT_DIR$/stockSelection.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/stock-selection.css" />
+        <option value="$PROJECT_DIR$/stockSelection.html" />
       </list>
     </option>
   </component>
@@ -244,12 +243,12 @@
       <workItem from="1492684204695" duration="12679000" />
       <workItem from="1492773500425" duration="311000" />
       <workItem from="1493002438028" duration="21000" />
-      <workItem from="1493104457239" duration="6107000" />
+      <workItem from="1493104457239" duration="7796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19331000" />
+    <option name="totallyTimeSpent" value="21020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -465,14 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/stock-selection.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/example.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -512,18 +503,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/stock-selection.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/dragulaInUse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="543">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stockSelection.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="118" column="26" lean-forward="true" selection-start-line="118" selection-start-column="26" selection-end-line="118" selection-end-column="26" />
+        <state relative-caret-position="645">
+          <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
